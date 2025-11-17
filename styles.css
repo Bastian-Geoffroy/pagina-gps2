@@ -1,0 +1,603 @@
+:root{
+  /* Paleta final azul profesional */
+  --bg:#ffffff;
+  --surface:#f8fafc;
+  --accent:#f1f5ff;
+  --brand:#2563eb;
+  --brand-2:#1d4ed8;
+  --ink:#0f172a;
+  --muted:#475569;
+  --chip:#e0e7ff;
+  --line:#e2e8f0;
+}
+
+/* === Reset === */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+  color:var(--ink);
+  background:var(--bg);
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* === NAVBAR === */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:#fff;
+  color:var(--ink);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:saturate(180%) blur(8px);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--ink);font-weight:600;opacity:.95}
+.nav-links a:hover{color:var(--brand-2);opacity:1}
+.brand-text{font-size:28px;font-weight:900;color:#000;letter-spacing:.5px}
+.brand-text span{color:var(--brand)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 18px;border-radius:12px;font-weight:700;border:1px solid transparent;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s, color .2s;
+}
+.btn.primary{background:var(--brand);color:#fff;border:1px solid var(--brand);box-shadow:0 6px 12px rgba(37,99,235,.2)}
+.btn.primary:hover{background:var(--brand-2);transform:translateY(-1px)}
+
+/* === HERO === */
+header.section-accent{
+  background:radial-gradient(60% 80% at 50% 0%,rgba(37,99,235,.08),transparent 80%),var(--accent);
+}
+.copy h1{font-size:44px;line-height:1.1;margin:0 0 8px;font-weight:900;color:var(--ink)}
+.copy h1 .brand{
+  background:linear-gradient(90deg,#2563eb 0%, #60a5fa 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.copy p{color:var(--muted);font-size:18px;margin:8px 0 14px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* === GRID TEXTO / IMAGEN === */
+.block-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.photo{
+  position:relative;padding:12px;border-radius:22px;background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 12px 32px rgba(2,6,23,.08);
+}
+.photo img{
+  width:100%;height:auto;border-radius:18px;display:block;object-fit:cover;
+  box-shadow:0 8px 28px rgba(2,6,23,.06);
+}
+.photo.left{justify-self:start}.photo.right{justify-self:end}
+
+/* === SECCIONES === */
+section, header{padding:110px 0}
+#about{background:var(--surface)}
+#features{background:var(--bg)}
+#how{background:var(--surface)}
+#contact{background:var(--bg)}
+
+/* === TÍTULOS === */
+.section-title{position:relative;margin:0 0 14px;font-size:30px;font-weight:900}
+.section-title::after{
+  content:"";position:absolute;left:0;bottom:-10px;width:84px;height:6px;border-radius:999px;
+  background:linear-gradient(90deg,#2563eb 0%,#93c5fd 100%);
+  box-shadow:0 6px 14px rgba(37,99,235,.25);
+}
+.section-sub{color:var(--muted);max-width:720px;margin:8px 0 0}
+
+/* === KPI === */
+.kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.kpi{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;
+  box-shadow:0 10px 24px rgba(2,6,23,.06);
+}
+.kpi strong{display:block;font-size:20px;color:var(--brand)}
+.kpi span{font-size:12px;color:var(--muted)}
+
+/* === CARDS === */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.card{
+  position:relative;isolation:isolate;
+  background:#fff;border:1px solid var(--line);
+  border-radius:16px;padding:18px 16px;
+  box-shadow:0 10px 24px rgba(2,6,23,.06);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(2,6,23,.1)}
+.card h3{margin:8px 0 6px;color:var(--brand-2)}
+.card p{margin:0;color:var(--muted)}
+.chip{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#eef2ff;color:var(--brand)}
+
+/* === PANEL DESTACADO === */
+.panel{position:relative;padding:90px 0}
+.panel-inner{
+  max-width:1150px;margin:0 auto;padding:36px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;
+  border-radius:24px;border:1px solid var(--line);
+  background:#fff;box-shadow:0 18px 40px rgba(2,6,23,.08);
+}
+.panel-actions{display:flex;gap:12px;margin-top:14px}
+
+/* === TIMELINE === */
+.timeline{list-style:none;margin:18px 0 0;padding:0}
+.timeline .step{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:16px;border-radius:18px;margin-bottom:12px;
+  background:#fff;border:1px solid var(--line);
+  box-shadow:0 10px 24px rgba(2,6,23,.06);
+  transition:transform .25s, box-shadow .25s;
+}
+.timeline .step:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(2,6,23,.1)}
+.badge{
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;flex:0 0 auto;
+  background:linear-gradient(180deg,#3b82f6,#1e40af);
+}
+.step-body h3{margin:0 0 6px;color:var(--brand-2)}
+.step-body p{margin:0;color:var(--muted)}
+
+/* === CONTACTO === */
+.contact-stack{display:grid;gap:12px;max-width:520px}
+.contact-item{
+  display:flex;align-items:center;gap:12px;padding:16px;border-radius:16px;text-decoration:none;
+  background:#fff;border:1px solid var(--line);
+  box-shadow:0 10px 24px rgba(2,6,23,.06);
+  transition:transform .25s, box-shadow .25s;
+}
+.contact-item:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(2,6,23,.1)}
+.contact-item strong{display:block;color:var(--brand-2)}
+.contact-item small{color:var(--muted)}
+
+/* === FOOTER === */
+footer{
+  background:#fff;color:#334155;padding:24px 0;border-top:1px solid var(--line);
+}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot a{color:#1d4ed8}
+.foot a:hover{color:#0f172a}
+
+/* === WHATSAPP === */
+.wa-float{
+  position:fixed;right:18px;bottom:18px;
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 14px;background:#25D366;color:#fff;
+  border-radius:999px;font-weight:700;
+  box-shadow:0 10px 24px rgba(37,211,102,.45)
+}
+
+/* === RESPONSIVE BASE === */
+@media(max-width:1200px){.grid-2{grid-template-columns:1fr}}
+@media(max-width:1024px){
+  .block-grid{grid-template-columns:1fr;gap:24px}
+  .panel-inner{grid-template-columns:1fr;padding:24px}
+  .photo img{max-height:360px}
+}
+
+/* === MARCOS AZULES EN FOTOS (sin cambiar HTML) === */
+/* === MARCO AZUL SÓLIDO Y LIMPIO EN LAS FOTOS === */
+.photo{
+  position:relative;
+  padding:10px;
+  border-radius:20px;
+  background:#ffffff;
+  border:3px solid #2563eb;           /* azul principal */
+  box-shadow:0 8px 24px rgba(37,99,235,.25);
+}
+.photo img{
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  display:block;
+  object-fit:cover;
+  box-shadow:0 4px 12px rgba(37,99,235,.15);
+}
+
+/* halo azul difuminado alrededor del contenedor */
+.photo::before{
+  content:"";position:absolute;inset:-10px;z-index:-1;border-radius:32px;
+  background:linear-gradient(135deg,
+    rgba(37,99,235,.18),
+    rgba(99,102,241,.12),
+    rgba(37,99,235,.18));
+  filter:blur(10px);
+}
+/* trazo interior sutil para que “encaje” con el marco */
+.photo::after{
+  content:"";position:absolute;inset:0;border-radius:26px;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(37,99,235,.18);
+}
+
+/* === DETALLES VISUALES ADICIONALES EN PÁGINA === */
+
+/* separador suave entre secciones blancas */
+section + section{
+  position:relative;
+}
+section + section::before{
+  content:"";position:absolute;left:0;right:0;top:-36px;height:36px;
+  background:linear-gradient(180deg,rgba(37,99,235,.10),rgba(37,99,235,0));
+  border-top-left-radius:24px;border-top-right-radius:24px;
+}
+
+/* “chips” más definidas */
+.pill-list span{
+  background:#eef2ff;border:1px solid #e0e7ff;color:#1d4ed8;
+  box-shadow:0 4px 10px rgba(2,6,23,.04);
+}
+
+/* cards con borde azul al hover */
+.card:hover{
+  box-shadow:0 18px 36px rgba(2,6,23,.10);
+  border-color:rgba(37,99,235,.30);
+}
+
+/* KPIs con halo ligero */
+.kpi{
+  background:#fff;border:1px solid var(--line);
+  box-shadow:0 12px 28px rgba(2,6,23,.08);
+}
+.kpi strong{color:#2563eb}
+
+/* timeline con línea guía azul */
+.timeline{
+  position:relative;
+}
+.timeline::before{
+  content:"";position:absolute;left:18px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,rgba(37,99,235,.35),rgba(37,99,235,.05));
+  border-radius:2px;
+}
+.badge{
+  background:linear-gradient(180deg,#3b82f6,#1e40af);
+  box-shadow:0 6px 14px rgba(37,99,235,.35);
+}
+
+/* botones primarios con brillo sutil al pasar */
+.btn.primary{position:relative;overflow:hidden}
+.btn.primary::after{
+  content:"";position:absolute;top:0;bottom:0;left:-120%;width:120%;
+  background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.45),rgba(255,255,255,0));
+  transform:skewX(-20deg);transition:transform .6s ease;
+}
+.btn.primary:hover::after{transform:translateX(220%) skewX(-20deg)}
+
+.timeline::before{
+  display:none;
+}
+header.section-accent{
+  background:#ffffff !important;
+}
+
+/* =====================================================
+   VISTA CELULAR HERMOSA (ajustes fuertes para móvil)
+   ===================================================== */
+/* ============================
+   VISTA CELULAR (menú + hero)
+   ============================ */
+@media (max-width:768px){
+
+  html,body{
+    font-size:15px;
+  }
+
+  .container{
+    padding:0 16px;
+  }
+
+  /* NAV: links arriba + botón abajo full width */
+  .nav-inner{
+    height:auto;
+    padding:10px 0 8px;
+    gap:8px;
+  }
+
+  .brand-text{
+    font-size:22px;
+  }
+
+  .nav-links{
+    display:flex;
+    flex-wrap:wrap;              /* que baje a 2 líneas */
+    gap:8px 16px;
+    align-items:center;
+    justify-content:flex-start;
+    overflow-x:visible;          /* sin barra gris */
+  }
+
+  .nav-links > a{
+    font-size:14px;
+    padding:0;
+  }
+
+  /* BOTÓN IMPORTANTE: siempre visible y grande */
+  .nav-links > .btn.cta{
+    margin-top:4px;
+    flex:1 1 100%;              /* ocupa todo el ancho */
+    justify-content:center;
+    font-size:14px;
+    padding:8px 16px;
+    border-radius:999px;
+    box-shadow:0 4px 12px rgba(37,99,235,.28);
+  }
+
+  /* HERO más compacto y centrado */
+  header.section-accent{
+    padding:72px 0 52px;
+  }
+
+  .block-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .copy{
+    text-align:center;
+    padding:0 4px;
+  }
+
+  .copy h1{
+    font-size:26px;
+    line-height:1.15;
+    margin-bottom:10px;
+  }
+
+  .copy p{
+    font-size:14px;
+    margin-bottom:16px;
+  }
+
+  .cta-row{
+    flex-direction:column;
+    align-items:stretch;
+    max-width:360px;
+    margin:0 auto;
+    gap:10px;
+  }
+
+  .cta-row .btn{
+    width:100%;
+  }
+
+  /* Secciones */
+  section{
+    padding:64px 0 56px;
+  }
+
+  .section-title{
+    font-size:22px;
+    text-align:center;
+  }
+  .section-title::after{
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+  .section-sub{
+    text-align:center;
+    font-size:14px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Fotos centradas */
+  .photo{
+    max-width:360px;
+    margin:10px auto 0;
+  }
+
+  /* Grillas a 1 columna */
+  .grid-2{
+    grid-template-columns:1fr;
+  }
+
+  .panel{
+    padding:56px 0;
+  }
+  .panel-inner{
+    grid-template-columns:1fr;
+    padding:22px 16px;
+    gap:18px;
+  }
+  .panel-actions{
+    flex-direction:column;
+  }
+  .panel-actions .btn{
+    width:100%;
+  }
+
+  /* KPI en 2 columnas */
+  .kpi-row{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  /* Footer en columna */
+  .foot{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  /* WhatsApp más pequeño */
+  .wa-float{
+    right:12px;
+    bottom:12px;
+    padding:8px 10px;
+    font-size:13px;
+    gap:6px;
+  }
+  .wa-float .wa-label{
+    display:none; /* deja solo el ícono si quieres */
+  }
+}
+
+@media (max-width:480px){
+  .copy h1{font-size:23px;}
+  .kpi-row{grid-template-columns:1fr;}
+}
+/* ===========================================
+   MENÚ MÓVIL — dropdown fuera del container
+   =========================================== */
+@media (max-width:768px){
+
+  /* Estilo base del nav */
+  .nav{
+    position:relative;
+    z-index:9999;
+  }
+
+  .nav-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:64px;
+  }
+
+  /* Botón Ingresar clientes (visible siempre) */
+  .nav .btn.cta{
+    display:inline-flex;
+    font-size:14px;
+    padding:8px 14px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+
+  /* HAMBURGUESA */
+  .nav-toggle{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    background:#eef2ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:22px;
+    color:var(--brand);
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+  }
+
+  /* ===========================================
+     DROPDOWN MÓVIL — FUERA DEL CONTAINER
+     =========================================== */
+  .nav-links{
+    position:absolute;
+    top:64px;         /* justo debajo del nav */
+    left:0;
+    right:0;
+    width:100%;
+    background:#fff;
+    padding:20px;
+    display:none;
+    flex-direction:column;
+    gap:18px;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+  }
+
+  .nav.open .nav-links{
+    display:flex;
+  }
+
+  /* Ocultar botón extra dentro del menú */
+  .nav-links .cta{
+    display:none !important;
+  }
+
+  .nav-links a{
+    font-size:17px;
+    padding:6px 0;
+  }
+
+  /* Orden correcto de elementos */
+  .brand-text{ order:1; }
+  .nav-toggle{ order:2; }
+  .nav .btn.cta{ order:3; }
+
+}
+/* Botón móvil "Ingresar clientes" oculto en escritorio */
+.nav .cta-mobile{
+  display:none;
+}
+
+/* ============================
+   Ajustes para vista móvil
+   ============================ */
+@media (max-width:768px){
+
+  .nav-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:64px;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  /* Orden en la barra: logo | hamburguesa arriba, botón abajo */
+  .brand-text{
+    order:1;
+    flex:1 1 auto;
+  }
+
+  .nav-toggle{
+    order:2;
+  }
+
+  /* Botón móvil siempre visible debajo del logo */
+  .nav .cta-mobile{
+    display:inline-flex;
+    order:3;
+    width:100%;
+    justify-content:center;
+    font-size:14px;
+    padding:8px 16px;
+    border-radius:999px;
+    margin-top:8px;
+    box-shadow:0 4px 10px rgba(37,99,235,.25);
+  }
+
+  /* El botón dentro del dropdown NO se muestra en móvil */
+  .nav-links .cta{
+    display:none !important;
+  }
+}
+/* ================================
+   FIX WHATSAPP – Vista móvil
+   ================================ */
+@media (max-width:768px){
+
+  .wa-float{
+    position:fixed !important;
+    right:14px !important;
+    bottom:14px !important;
+    width:54px !important;
+    height:54px !important;
+    padding:0 !important;
+    border-radius:50% !important;
+    background:#25D366 !important;        /* color oficial */
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    box-shadow:0 8px 18px rgba(0,0,0,.25) !important;
+    overflow:hidden !important;
+  }
+
+  /* BORRA la imagen verde que tienes actualmente */
+  .wa-float img,
+  .wa-float .wa-icon{
+    display:none !important;
+  }
+
+  /* Inserta el icono oficial de WhatsApp */
+  .wa-float::before{
+    content:"" !important;
+    width:28px;
+    height:28px;
+    background:url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') center/contain no-repeat;
+    display:block;
+  }
+
+  /* Esconde el texto */
+  .wa-label{
+    display:none !important;
+  }
+}

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EstaciónGPS — Rastreo y gestión de flotas</title>
+  <meta name="description" content="Rastreo GPS en tiempo real, alertas y reportes para vehículos y flotas en Chile." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand-text" href="#top" aria-label="Inicio">Estación<span>GPS</span></a>
+      <a class="btn primary cta cta-mobile" href="#" target="_blank" rel="noopener">
+      Ingresar clientes
+    </a>
+      <div class="nav-toggle" onclick="document.querySelector('.nav').classList.toggle('open')">
+  ☰
+</div>
+
+      <div class="nav-links">
+        <a href="#about">Quiénes somos</a>
+        <a href="#features">Características</a>
+        <a href="#how">Cómo funciona</a>
+        <a href="#contact">Contacto</a>
+        <a class="btn primary cta" href="#" target="_blank" rel="noopener">Ingresar clientes</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="section-accent block media-right">
+    <div class="container block-grid">
+      <div class="copy">
+        <h1>Control total de tu flota con <span class="brand">EstaciónGPS</span></h1>
+        <p>Rastreo preciso, alertas en tiempo real y reportes claros. Reduce costos, mejora seguridad y decide con datos.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#about">Conocer la plataforma</a>
+          <a class="btn" href="#features">Ver características</a>
+        </div>
+      </div>
+      <figure class="photo xl right">
+        <img src="img/logo3.png" alt="Flota monitoreada por GPS">
+      </figure>
+    </div>
+  </header>
+
+  <!-- QUIÉNES SOMOS -->
+  <section id="about" class="block media-left">
+    <div class="container block-grid">
+      <figure class="photo lg left">
+        <img src="img/ChatGPT Image 6 nov 2025, 20_32_15.png" alt="Equipo técnico instalando GPS">
+      </figure>
+      <div class="copy">
+        <h2 class="section-title left">Quiénes somos</h2>
+        <p class="section-sub left">Integramos hardware GPS certificado con software propio. Nos enfocamos en disponibilidad, precisión y soporte cercano para que administrar vehículos y flotas sea simple.</p>
+
+        <div class="pill-list">
+          <span>Instalación a domicilio</span>
+          <span>Web + App móvil</span>
+          <span>Reportes claros</span>
+        </div>
+
+        <div class="kpi-row">
+          <div class="kpi"><strong>99,9%</strong><span>uptime</span></div>
+          <div class="kpi"><strong>+50</strong><span>flotas activas</span></div>
+          <div class="kpi"><strong>24/7</strong><span>soporte</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARACTERÍSTICAS -->
+  <section id="features" class="block media-right">
+    <div class="container block-grid">
+      <div class="copy">
+        <h2 class="section-title left">Características</h2>
+        <p class="section-sub left">Herramientas esenciales para controlar tu operación con un enfoque simple y profesional.</p>
+
+        <div class="grid-2">
+          <div class="card hover">
+            <div class="chip">🛰️</div>
+            <h3>Monitoreo en tiempo real</h3>
+            <p>Posición, velocidad y rumbo segundo a segundo.</p>
+          </div>
+          <div class="card hover">
+            <div class="chip">🛡️</div>
+            <h3>Alertas inteligentes</h3>
+            <p>Exceso de velocidad, geocercas, batería y detenciones.</p>
+          </div>
+          <div class="card hover">
+            <div class="chip">📈</div>
+            <h3>Reportes y analítica</h3>
+            <p>Historial, horas de uso y exportaciones.</p>
+          </div>
+          <div class="card hover">
+            <div class="chip">📍</div>
+            <h3>Cobertura nacional</h3>
+            <p>Instalación en ciudades disponibles.</p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="photo md right">
+        <img src="img/gps.png" alt="Panel de monitoreo y mapa en vivo">
+      </figure>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA — Panel -->
+  <section id="how" class="panel">
+    <div class="panel-inner">
+      <div class="panel-media">
+        <figure class="photo">
+          <img src="img/monitoreo.png" alt="Operador usando EstaciónGPS">
+        </figure>
+      </div>
+
+      <div class="panel-copy">
+        <h2 class="section-title left">Cómo funciona</h2>
+
+        <ol class="timeline">
+          <li class="step">
+            <span class="badge">1</span>
+            <div class="step-body">
+              <h3>Instalación</h3>
+              <p>Técnicos autorizados realizan la instalación y pruebas.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="badge">2</span>
+            <div class="step-body">
+              <h3>Configuración</h3>
+              <p>Geocercas, límites y notificaciones a medida.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="badge">3</span>
+            <div class="step-body">
+              <h3>Operación</h3>
+              <p>Mapa en vivo, historial, reportes y soporte continuo.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="panel-actions">
+          <a href="#features" class="btn primary">Ver características</a>
+          <a href="#contact" class="btn">Hablar con soporte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO — Panel -->
+  <section id="contact" class="panel">
+    <div class="panel-inner">
+      <div class="panel-copy">
+        <h2 class="section-title left">Contacto</h2>
+
+        <div class="contact-stack">
+          <a class="contact-item" href="tel:+56912345678">
+            <span class="contact-ico">📞</span>
+            <div>
+              <strong>+56 9 1234 5678</strong>
+              <small>Atención 9:00–18:00</small>
+            </div>
+          </a>
+
+          <a class="contact-item" href="mailto:contacto@estaciongps.cl">
+            <span class="contact-ico">✉️</span>
+            <div>
+              <strong>contacto@estaciongps.cl</strong>
+              <small>Respuesta el mismo día hábil</small>
+            </div>
+          </a>
+
+          <a class="btn primary" href="https://wa.me/56912345678" target="_blank" rel="noopener">
+            WhatsApp • EstaciónGPS
+          </a>
+        </div>
+      </div>
+
+      <div class="panel-media">
+        <figure class="photo">
+          <img src="img/contacto.png" alt="Soporte técnico EstaciónGPS">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot">
+      <div class="foot-left">
+        <span>© <span id="y"></span> EstaciónGPS. Todos los derechos reservados.</span>
+      </div>
+      <div class="foot-right">
+        <a href="#about">Quiénes somos</a>
+        <a href="#features">Características</a>
+        <a href="#contact">Soporte</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/56912345678" class="wa-float" target="_blank" rel="noopener">
+    <span class="wa-icon">🟢</span>
+    <span class="wa-label">WhatsApp • EstaciónGPS</span>
+  </a>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
